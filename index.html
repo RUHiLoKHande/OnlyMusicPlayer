@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Only Music Player:Music for</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .box1 {
+            border: 2px solid white;
+            width: 300px;
+            height: 140px;
+            position: relative;
+            top: 10px;
+            left: 15px;
+            border-radius: 12px;
+            background-color: rgba(35, 32, 32, 0.823);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box1:hover {
+            box-shadow: 0 0 5px #c9f51a, 0 0 15px #4df6ff, 0 0 25px #ff931f, 0 0 100px #4cf9a8;
+        }
+
+        .box1 button {
+            background-color: transparent;
+            border: none;
+            margin: 13px 13px 13px;
+
+        }
+
+        .btn1:hover {
+            box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4, 0 0 100px #03e9f4;
+            font-size: 20px;
+
+
+        }
+
+        .box1 i {
+            color: aliceblue;
+            font-size: 24px;
+            gap: 200px;
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: transparent;
+            font-size: 22px;
+
+        }
+
+        .logo i {
+            background: linear-gradient(to right, #39ff14, #ff55a5);
+            /* Use your preferred color combination */
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box2 {
+            /* border: 2px solid white; */
+            position: relative;
+            top: 25px;
+            justify-content: center;
+            width: 350px;
+            text-align: center;
+            background-color: rgba(35, 32, 32, 0.823);
+            border-radius: 15px;
+            height: 470px;
+            left: 5px;
+
+        }
+
+        .box2:hover {
+            box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4, 0 0 100px #03e9f4;
+        }
+
+        .box2 i {
+            background: linear-gradient(to right, #14a5ff, #ff55a5);
+
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 34px;
+            position: relative;
+            top: 12px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .para {
+            color: whitesmoke;
+            /* border: 2px solid rgb(243, 236, 236); */
+            width: 250px;
+            height: 220px;
+            overflow: scroll;
+            position: relative;
+            left: 30px;
+            top: 40px;
+            background-color: rgb(53, 50, 50);
+            border-radius: 12px;
+        }
+
+        .para:hover {
+            box-shadow: 0 0 5px #f0f27c, 0 0 15px #d6ff5a, 0 0 25px #f7f033, 0 0 100px #03e9f4;
+
+        }
+
+        .para::-webkit-scrollbar {
+            background-color: transparent;
+            width: 10px;
+
+        }
+
+        .para::-webkit-scrollbar-thumb {
+            background: linear-gradient(orange, rgb(234, 86, 111), rgb(236, 70, 236), rgb(81, 81, 239));
+            border-radius: 20px;
+        }
+
+        .para h1 {
+            font-size: 24px;
+        }
+
+        .btn {
+            border: 2px solid wheat;
+            height: 40px;
+            border-radius: 23px;
+
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 5px #27292a,
+                0 0 15px #161616, 0 0 25px #1d2e2f,
+                0 0 100px #031d1e;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .line {
+            border: 2px solid wheat;
+            position: relative;
+            left: 0px;
+        }
+
+        body::-webkit-scrollbar {
+            background-color: transparent;
+            width: 10px;
+            height: 5px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: linear-gradient(orange, rgb(234, 86, 111), rgb(236, 70, 236), rgb(81, 81, 239));
+            border-radius: 20px;
+        }
+
+        .glob {
+            position: relative;
+            top: 90px;
+
+        }
+
+        .glob i {
+            font-size: 22px;
+
+
+        }
+
+        .glob button {
+            background-color: transparent;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 12px;
+            position: relative;
+            right: 90px;
+            cursor: pointer;
+
+        }
+
+        .sidebox {
+            border: transparent;
+            width: 1015px;
+            position: relative;
+            bottom: 580px;
+            left: 370px;
+            height: 600px;
+            overflow: scroll;
+            background-color: rgb(33, 31, 31);
+
+        }
+
+        .sidebox::-webkit-scrollbar {
+            border: transparent;
+
+        }
+
+        .section {
+            border: 2px solid whitesmoke;
+            height: 650px;
+        }
+
+        .boxi {
+            display: flex;
+            justify-content: space-evenly;
+
+
+
+        }
+
+        .subbox {
+            margin-top: 12px;
+            border: 2px solid wheat;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(orange, rgb(249, 70, 100), rgb(244, 43, 244));
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .childbox {
+            width: 100%;
+            height: 100%;
+            background-color: #1A1A1A;
+            transition: all 0.3s;
+            border-radius: 20px;
+        }
+        .childbox img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .subbox:hover .childbox {
+            scale: 0.95;
+            border-radius: 20px;
+        }
+
+        .childbox:hover {
+            box-shadow: 0px 0px 100px #0ad7e2;
+            cursor: pointer;
+        }
+        .childbox button {
+            position: relative;
+           bottom:25px;
+           left:65px;
+           border-radius:12px ;
+           border: transparent;
+           
+        }
+        .childbox button:hover {
+            box-shadow: 0 0 5px #31b6f8,
+                0 0 15px #a70c0c, 0 0 25px #31dde6,
+                0 0 100px #0dedf5;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="box1">
+            <div class="logo"><i class="fa-solid fa-music">ONLY MUSIC</i></div>
+            <button class="btn1"> <i class="fa-solid fa-house">Home</i><br></button>
+            <button class="btn1"><i class="fa-solid fa-magnifying-glass">Search</i></button>
+        </div>
+
+        <div class="box2">
+            <i class="fa-solid fa-book">Your Library</i>
+            <div class="para">
+                <h1>Create your first playlist</h1>
+                <p>It's easy,we'll help you</p>
+                <button class="btn">Create playlist</button>
+                <p class="line"></p>
+                <h1>Let's find some podcasts to <br> follow</h1>
+                <p>We'll keep you update on new <br>episode</p>
+                <button class="btn">Browse podcast</button>
+            </div>
+            <div class="glob">
+                <button><i class="fa-solid fa-globe">English</i></button>
+            </div>
+        </div>
+
+        <div class="sidebox">
+
+            <div class="boxi">
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music1.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file1.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music5.jpg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music4.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Add more subboxes for additional songs -->
+            </div>
+            <div class="boxi">
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music3.jpg" alt="">
+                        <audio class="musicPlayer" src="your-music-file1.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music2.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music1.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Add more subboxes for additional songs -->
+            </div>
+            <div class="boxi">
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music1.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file1.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music1.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music2.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Add more subboxes for additional songs -->
+            </div>
+            <div class="boxi">
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music3.jpg" alt="">
+                        <audio class="musicPlayer" src="your-music-file1.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music4.jpeg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music5.jpg" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Add more subboxes for additional songs -->
+            </div>
+            <div class="boxi">
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music6.avif" alt="">
+                        <audio class="musicPlayer" src="your-music-file1.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music7.avif" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="subbox">
+                    <div class="childbox">
+                        <img src="img/music8.avif" alt="">
+                        <audio class="musicPlayer" src="your-music-file2.mp3"></audio>
+                        <button onclick="toggleMusic(this)">
+                            <i class="playIcon fa-solid fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Add more subboxes for additional songs -->
+            </div>
+            <!-- add more music if you want to only copies boxi class amd paste after thi -->
+
+        </div>
+    </div>
+
+    
+        
+    <script>
+        var musicPlayers = document.querySelectorAll('.musicPlayer');
+        var playIcons = document.querySelectorAll('.playIcon');
+        var isPlaying = false;
+
+        function toggleMusic(button) {
+            var index = Array.from(button.parentElement.parentElement.parentElement.children).indexOf(button.parentElement.parentElement);
+            var currentMusicPlayer = musicPlayers[index];
+            var currentPlayIcon = playIcons[index];
+
+            if (isPlaying) {
+                currentMusicPlayer.pause();
+                isPlaying = false;
+                currentPlayIcon.className = 'playIcon fa-solid fa-play';
+            } else {
+                currentMusicPlayer.play();
+                isPlaying = true;
+                currentPlayIcon.className = 'playIcon fa-solid fa-pause';
+            }
+        }
+    </script>
+    
+
+
+
+</body>
+
+</html>
